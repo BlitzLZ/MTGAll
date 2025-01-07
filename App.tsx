@@ -1,11 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.title}>Welcome to MTGApp</Text>
+      <TouchableOpacity style={styles.neuButton}>
+        <Text style={styles.buttonText}>Press me</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -13,8 +15,37 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#f4f4f4",
+  },
+  title: {
+    fontSize: 24,
+    color: "#333",
+    marginBottom: 20,
+    fontWeight: "bold",
+  },
+  neuButton: {
+    backgroundColor: "#e0e0e0",
+    borderRadius: 50,
+    boxShadow: "inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff",
+    color: "#4d4d4d",
+    cursor: "pointer",
+    fontSize: 18,
+    paddingVertical: 15,
+    paddingHorizontal: 40,
+    borderColor: "rgb(206, 206, 206)",
+    borderWidth: 2,
+  },
+  buttonText: {
+    color: "#4d4d4d",
+    fontSize: 18,
+    fontWeight: "500",
+  },
+  neuButtonHover: {
+    boxShadow: "inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff",
+  },
+  neuButtonFocus: {
+    boxShadow: "inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff",
   },
 });
